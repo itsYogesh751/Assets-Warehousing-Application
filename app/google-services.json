@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1053732824640",
+    "firebase_url": "https://assets-warehousing-app-default-rtdb.firebaseio.com",
+    "project_id": "assets-warehousing-app",
+    "storage_bucket": "assets-warehousing-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053732824640:android:00f7dd98c6b3cf85d961a5",
+        "android_client_info": {
+          "package_name": "com.example.assets_warehousing_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053732824640-3obqhq57uulfe6n1op61i6ptpn6maj8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmM29yfdt3KFKkW36ZB-gmpoi1xVH_NTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053732824640-3obqhq57uulfe6n1op61i6ptpn6maj8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053732824640:android:48c5a15a0d3583eed961a5",
+        "android_client_info": {
+          "package_name": "com.example.assetwarehousingapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053732824640-3obqhq57uulfe6n1op61i6ptpn6maj8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmM29yfdt3KFKkW36ZB-gmpoi1xVH_NTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053732824640-3obqhq57uulfe6n1op61i6ptpn6maj8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
