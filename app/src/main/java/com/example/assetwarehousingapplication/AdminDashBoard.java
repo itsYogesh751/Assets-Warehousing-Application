@@ -37,6 +37,7 @@ public class AdminDashBoard extends AppCompatActivity {
         Report = findViewById(R.id.user_generate_annual_report);
         GenLiq = findViewById(R.id.user_generate_liquidation);
         Logout = findViewById(R.id.user_logout);
+        ManageNominee = findViewById(R.id.user_manage_nominee);
 
 
         editProfile.setOnClickListener(new View.OnClickListener() {
