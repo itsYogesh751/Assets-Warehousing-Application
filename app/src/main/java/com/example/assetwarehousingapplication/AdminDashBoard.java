@@ -81,6 +81,59 @@ public class AdminDashBoard extends AppCompatActivity {
 
             }
         });
+        ImageView fetchSmsbtn=findViewById(R.id.button_fetch_last_transaction);
+        fetchSmsbtn.setClickable(true);
+        fetchSmsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityCompat.requestPermissions(AdminDashBoard.this,
+                        new String[]{Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
+
+                Cursor cursor = getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
+
+                cursor.moveToFirst();
+
+                boolean check=true;
+                while(check!=false)
+                {
+                    if(cursor.getString(12).contains("ICICI") || cursor.getString(12).contains("HDFC"))
+                    {
+                        if(cursor.getString(12).contains("credited") || cursor.getString(12).contains("debited")) {
+                            check = false;
+                            break;
+                        }
+                    }
+                    cursor.moveToNext();
+                }
+                String sms=cursor.getString(12);
+                int index=0;
+                for(int i=0;i<sms.length();i++)
+                {
+                    if(sms.charAt(i)=='R' && sms.charAt(i+1)=='s' )
+                    {
+                        index=i+2;
+                        break;
+                    }
+                }
+                StringBuilder value= new StringBuilder();
+                for(int i=index;sms.charAt(i)!='.';i++)
+                {
+                    value.append(sms.charAt(i));
+                }
+                StringBuilder val=new StringBuilder();
+                val.append("Last transaction is : ");
+                if(sms.contains("debited"))
+                {
+                    val.append("(-)");
+                }
+                else{
+                    val.append("(+)");
+                }
+                val.append(value);
+                TextView displaysms=findViewById(R.id.last_transaction);
+                displaysms.setText(val);
+            }
+        });
 
         HashMap<String,Object> mp;
 
