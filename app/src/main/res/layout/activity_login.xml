@@ -43,7 +43,7 @@
                 android:hint="Username"
                 android:drawableLeft="@drawable/ic_baseline_person_pin_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/ic_baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
 
             <Button
                 android:layout_width="match_parent"

@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+// User & Nominee DashBoard;
+// User -> Add Assets,View Assets(CURD Ops), Add Nominee , Allocate SOP's , Value Generation for liquidation
+//            , Document Upload(PDFs) ;
+// Nominee -> View Allocated Assets , Contact SOPs;
+
 public class MainActivity extends AppCompatActivity {
 
     Button AdminloginButton , NomineeloginButton;
