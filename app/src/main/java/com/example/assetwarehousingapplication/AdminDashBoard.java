@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 public class AdminDashBoard extends AppCompatActivity {
 
     String UsrName = "ath123";
@@ -76,6 +78,16 @@ public class AdminDashBoard extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        HashMap<String,Object> mp;
+
+        ManageNominee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminDashBoard.this,NomineePopUp.class));
 
             }
         });
