@@ -1,9 +1,15 @@
-package com.example.assetwarehousingapplication;
+package com.example.assets_warehousing_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +36,8 @@ public class AdminDashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dash_board);
 
+        Intent i=getIntent();
+        String username=i.getExtras().getString("username");
         AdUsername = findViewById(R.id.admin_username);
         LiqAssets = findViewById(R.id.user_total_liquid_assets);
         TotAssets = findViewById(R.id.user_total_assets);
@@ -39,13 +47,13 @@ public class AdminDashBoard extends AppCompatActivity {
         Report = findViewById(R.id.user_generate_annual_report);
         GenLiq = findViewById(R.id.user_generate_liquidation);
         Logout = findViewById(R.id.user_logout);
-        ManageNominee = findViewById(R.id.user_manage_nominee);
 
 
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminDashBoard.this,AdminUserProfile.class);
+                Intent intent = new Intent(AdminDashBoard.this,userProfile2.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
@@ -58,10 +66,12 @@ public class AdminDashBoard extends AppCompatActivity {
             }
         });
 
+        ManageAssets.setClickable(true);
         ManageAssets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminDashBoard.this, ManageAssets.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
@@ -81,6 +91,7 @@ public class AdminDashBoard extends AppCompatActivity {
 
             }
         });
+
         ImageView fetchSmsbtn=findViewById(R.id.button_fetch_last_transaction);
         fetchSmsbtn.setClickable(true);
         fetchSmsbtn.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +107,7 @@ public class AdminDashBoard extends AppCompatActivity {
                 boolean check=true;
                 while(check!=false)
                 {
-                    if(cursor.getString(12).contains("ICICI") || cursor.getString(12).contains("HDFC"))
+                    if(cursor.getString(12).contains("ICICI") || cursor.getString(12).contains("HDFC") || cursor.getString(12).contains("SBI"))
                     {
                         if(cursor.getString(12).contains("credited") || cursor.getString(12).contains("debited")) {
                             check = false;
@@ -111,7 +122,7 @@ public class AdminDashBoard extends AppCompatActivity {
                 {
                     if(sms.charAt(i)=='R' && sms.charAt(i+1)=='s' )
                     {
-                        index=i+2;
+                        index=i+3;
                         break;
                     }
                 }
@@ -136,15 +147,16 @@ public class AdminDashBoard extends AppCompatActivity {
         });
 
         HashMap<String,Object> mp;
-
+        ImageView ManageNominee=findViewById(R.id.user_manage_nominee);
         ManageNominee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminDashBoard.this,NomineePopUp.class));
+                Intent intent=new Intent(AdminDashBoard.this,NomieePopup.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
 
             }
         });
-
         // AdUsername.setText(""+UsrName);
     }
 }

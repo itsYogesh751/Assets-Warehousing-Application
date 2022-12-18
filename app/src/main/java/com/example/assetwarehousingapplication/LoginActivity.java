@@ -1,4 +1,4 @@
-package com.example.assetwarehousingapplication;
+package com.example.assets_warehousing_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,7 +78,6 @@ public class LoginActivity extends AppCompatActivity {
     public void checkUser(){
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
-
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
@@ -98,13 +97,15 @@ public class LoginActivity extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
 
-                        Intent intent = new Intent(LoginActivity.this, AdminDashBoard.class);
+                        Intent intent = new Intent(LoginActivity.this,AdminDashBoard.class);
 
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("email", emailFromDB);
                         intent.putExtra("username", usernameFromDB);
                         intent.putExtra("password", passwordFromDB);
 
+                        username use=new username();
+                        use.setUser(usernameFromDB);
                         startActivity(intent);
                     } else {
                         loginPassword.setError("Invalid Credentials");

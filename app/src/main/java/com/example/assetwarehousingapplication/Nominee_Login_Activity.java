@@ -1,4 +1,4 @@
-package com.example.assetwarehousingapplication;
+package com.example.assets_warehousing_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

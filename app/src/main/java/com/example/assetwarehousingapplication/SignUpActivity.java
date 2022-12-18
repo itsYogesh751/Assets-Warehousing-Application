@@ -1,8 +1,11 @@
-package com.example.assetwarehousingapplication;
+package com.example.assets_warehousing_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +28,11 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        ActivityCompat.requestPermissions(SignUpActivity.this,
+                new String[]{Manifest.permission.RECEIVE_SMS}, PackageManager.PERMISSION_GRANTED);
 
+        ActivityCompat.requestPermissions(SignUpActivity.this,
+                new String[]{Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
         signupName = findViewById(R.id.signup_name);
         signupEmail = findViewById(R.id.signup_email);
         signupUsername = findViewById(R.id.signup_username);
@@ -47,7 +54,6 @@ public class SignUpActivity extends AppCompatActivity {
 
                 HelperClass helperClass = new HelperClass(name, email, username, password);
                 reference.child(username).setValue(helperClass);
-
                 Toast.makeText(SignUpActivity.this, "You have Signed Up successfully!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);

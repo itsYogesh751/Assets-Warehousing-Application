@@ -1,7 +1,9 @@
-package com.example.assetwarehousingapplication;
+package com.example.assets_warehousing_app;
 
 public class HelperClass {
 
+    String account_number,bank_name,account_type,ifsc_code;
+    int balance;
     String name,email,username,password;
 
     public String getName() {
@@ -42,6 +44,14 @@ public class HelperClass {
         this.username = username;
         this.password = password;
     }
+    public HelperClass(String bank_name, String account_number, String ifsc_code, int balance,String account_type) {
+        this.bank_name = bank_name;
+        this.account_number = account_number;
+        this.ifsc_code = ifsc_code;
+        this.balance = balance;
+        this.account_type=account_type;
+    }
+
 
     public HelperClass() {
     }
