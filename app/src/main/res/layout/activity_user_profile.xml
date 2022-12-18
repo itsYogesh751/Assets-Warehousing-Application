@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgyb"
+
+    android:layout_height="match_parent"
+    tools:context=".userProfile">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/yellow_border">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <Button
+        android:id="@+id/ViewAssetBtn"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:text="VIEW ASSETS"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
+
+    <Button
+        android:id="@+id/ADDassetbtn"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:text="ADD ASSETS"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ViewAssetBtn"
+        app:layout_constraintVertical_bias="0.081" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="151dp"
+                android:layout_height="27dp"
+                android:text="UserName"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.191" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="151dp"
+        android:layout_height="27dp"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <TextView
+        android:id="@+id/userphone"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="txtUname"
+        app:layout_constraintBottom_toTopOf="@+id/ViewAssetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/userEmail"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <TextView
+        android:id="@+id/userprofileid"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:text="txtUname"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="151dp"
+                android:layout_height="27dp"
+                android:text="UserID"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:text="txtUname"
+        app:layout_constraintBottom_toTopOf="@+id/userprofileid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Uname"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="4dp"
+        android:text="txtUname"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.473" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="151dp"
+                android:layout_height="27dp"
+                android:text="EmailID"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.339" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="147dp"
+                android:layout_height="24dp"
+                android:text="Phone"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.411" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="184dp"
+        android:layout_height="33dp"
+        android:text="txtUname"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="151dp"
+        android:layout_height="27dp"
+        android:text="UserProfile"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#090202"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <Button
+        android:id="@+id/fetchbtn"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:text="FETCH LAST TRANSACTION"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/last_transaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ADDassetbtn" />
+
+            <TextView
+                android:id="@+id/last_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ADDassetbtn" />
+
+    <Button
+        android:id="@+id/Addnomineebtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Add Nominee"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nusername"
+        app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/nusername"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter nominee username"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Addnomineebtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last_transaction"
+                tools:textColor="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

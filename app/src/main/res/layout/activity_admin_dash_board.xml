@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bgyb"
     tools:context=".AdminDashBoard">
+    
 
     <!-- ADMIN DASHBOARD -->
     <LinearLayout
@@ -14,6 +15,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -75,11 +86,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="VIEW, EDIT USER PROFILE"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_centerVertical="true"
-                        android:textSize="14sp"/>
+                        android:text="VIEW, EDIT USER PROFILE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/user_edit_profile"
@@ -264,11 +275,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
                         android:layout_centerVertical="true"
-                        android:textColor="@color/white"
-                        android:text="VIEW, UPDATE , DELETE , ADD ASSETS"/>
+                        android:text="VIEW, UPDATE , DELETE , ADD ASSETS"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/user_manage_assets"
@@ -283,63 +294,62 @@
         </androidx.cardview.widget.CardView>
 
         <!-- MANAGE NOMINEE -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="7dp"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="20dp">
-
-            <LinearLayout
+            <!-- MANAGE NOMINEE -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="15dp"
-                android:background="@drawable/yellow_border">
+                android:layout_margin="7dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MANAGE NOMINEE"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/yellow"/>
-
-                <View
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/black"/>
-
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:background="@drawable/yellow_border">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/white"
-                        android:text="VIEW, UPDATE , DELETE."/>
-
-                    <ImageView
-                        android:id="@+id/user_manage_nominee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_baseline_mode_edit_24"/>
-                </RelativeLayout>
+                        android:text="MANAGE NOMINEE"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/yellow"/>
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/black"/>
 
-        </androidx.cardview.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
 
-        <!-- SMS FETCHING -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"
+                            android:text="VIEW, UPDATE , DELETE."/>
+
+                        <ImageView
+                            android:id="@+id/user_manage_nominee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_baseline_mode_edit_24"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -357,7 +367,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LAST TRANSACTION"
+                    android:text="Fetch Last Transaction"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/yellow"/>
@@ -379,11 +389,11 @@
                         android:id="@+id/last_transaction"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
                         android:layout_centerVertical="true"
-                        android:textColor="@color/white"
-                        android:text="Fetch Last Trac."/>
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/button_fetch_last_transaction"
@@ -391,8 +401,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_baseline_mode_edit_24"/>
-
                 </RelativeLayout>
+
 
             </LinearLayout>
 
@@ -442,7 +452,10 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="14sp"/>
+        </LinearLayout>
+    </ScrollView>
+
 
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>

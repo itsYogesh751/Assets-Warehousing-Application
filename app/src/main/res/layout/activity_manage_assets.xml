@@ -52,7 +52,7 @@
                         android:layout_marginTop="10dp"/>
 
                     <TextView
-                        android:id="@+id/admin_user_total_assets"
+                        android:id="@+id/user_total_assets"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
@@ -179,7 +179,7 @@
                             android:layout_marginTop="10dp"/>
 
                         <TextView
-                            android:id="@+id/user_total_intangible_assets"
+                            android:id="@+id/user_total_liquid_assets"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
@@ -902,5 +902,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </ScrollView>
