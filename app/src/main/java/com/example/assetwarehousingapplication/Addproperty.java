@@ -66,18 +66,8 @@ public class Addproperty extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rera.isChecked()) {
-//                    reraRegistration.setVisibility(View.VISIBLE);
-//                    reraName.setVisibility(View.VISIBLE);
-//                    reraNametext.setVisibility(View.VISIBLE);
-//                    reraRegistrationtxt.setVisibility(View.VISIBLE);
                     dislinear.setVisibility(View.VISIBLE);
-
-
                 } else {
-//                    reraRegistration.setVisibility(View.INVISIBLE);
-//                    reraName.setVisibility(View.INVISIBLE);
-//                    reraNametext.setVisibility(View.INVISIBLE);
-//                    reraRegistrationtxt.setVisibility(View.INVISIBLE);
                     dislinear.setVisibility(View.INVISIBLE);
 
                 }

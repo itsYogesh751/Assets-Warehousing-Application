@@ -35,14 +35,15 @@ public class ViewBankAssets extends AppCompatActivity {
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Map<String, Object> mp=(Map<String, Object>) snapshot.child(username).child("asset").child("tangible").child("bank_assets").getValue();
+                Map<String, HashMap> mp=(Map<String, HashMap>) snapshot.child(username).child("asset").child("tangible").child("bank_assets").getValue();
                 // Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
                 ArrayList<Object> keys=new ArrayList<>();
-                HashMap<String,Object> k=new HashMap();
+                HashMap<String,HashMap> k=new HashMap();
                 int x=0;
-                for (Map.Entry<String,Object> entry : mp.entrySet()) {
+                for (Map.Entry<String,HashMap> entry : mp.entrySet()) {
                     //keys.add(entry.getValue());
                     k.put(String.valueOf(x),entry.getValue());
+
                     //System.out.println(entry.getValue());
                     x=x+1;
                 }
@@ -51,13 +52,19 @@ public class ViewBankAssets extends AppCompatActivity {
                 HashMap<String,Object> fina=new HashMap();
                 ListView listasset =findViewById(R.id.bank_list);
                 int i=0;
-                for (Map.Entry<String,Object> entry : k.entrySet())
+                for (Map.Entry<String,HashMap> entry : mp.entrySet())
                 {
-                    j= new StringBuilder("key= " + entry.getKey() + "value= " + entry.getValue());
+                    j= new StringBuilder("Account_number= " + entry.getValue().get("account_number")+
+                            " Balance= "+entry.getValue().get("balance")+"\n Bank_name= "+
+                            entry.getValue().get("bank_name")+" Account type= "+ entry.getValue().get("account type")+
+                            "\n IFSC CODE= "+entry.getValue().get("Ifsc code"));
+
                     System.out.println(entry.getValue());
                     smsMessagesList.add(String.valueOf(j));
                     i++;
                 }
+
+
                 Toast.makeText(getApplicationContext(),"done"+i+" "+smsMessagesList.size(),Toast.LENGTH_LONG).show();
 
                 arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, smsMessagesList);

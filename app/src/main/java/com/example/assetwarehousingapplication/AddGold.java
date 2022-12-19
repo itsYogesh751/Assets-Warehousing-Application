@@ -24,22 +24,22 @@ public class AddGold extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_gold);
+        setContentView(R.layout.activity_add_gold2);
 
         Intent i=getIntent();
         String username=i.getExtras().getString("username");
-        TextView price=findViewById(R.id.goldprice);
-        TextView weight=findViewById(R.id.goldweight);
-        TextView desc=findViewById(R.id.golddesc);
-        TextView goldtype=findViewById(R.id.typeofgold);
-        TextView goldname=findViewById(R.id.goldname);
-        TextView goldbanknametext=findViewById(R.id.goldbanknametext);
-        TextView goldbankname=findViewById(R.id.goldbankname);
-        TextView goldifsccodetext=findViewById(R.id.goldifsccodetext);
-        TextView goldbankifsccode=findViewById(R.id.goldbankifsccode);
-        TextView goldlockernumber=findViewById(R.id.goldlockernumber);
-        TextView goldlockernumbertext=findViewById(R.id.goldlockernumbertext);
-        CheckBox locker=findViewById(R.id.goldcheckbox);
+        TextView price=findViewById(R.id.goldprice2);
+        TextView weight=findViewById(R.id.goldweight2);
+        TextView desc=findViewById(R.id.golddesc2);
+        TextView goldtype=findViewById(R.id.typeofgold2);
+        TextView goldname=findViewById(R.id.goldname2);
+        TextView goldbanknametext=findViewById(R.id.goldbanknametext2);
+        TextView goldbankname=findViewById(R.id.goldbankname2);
+        TextView goldifsccodetext=findViewById(R.id.goldifsccodetext2);
+        TextView goldbankifsccode=findViewById(R.id.goldbankifsccode2);
+        TextView goldlockernumber=findViewById(R.id.goldlockernumber2);
+        TextView goldlockernumbertext=findViewById(R.id.goldlockernumbertext2);
+        CheckBox locker=findViewById(R.id.goldcheckbox2);
         goldbankifsccode.setVisibility(View.INVISIBLE);
         goldbankname.setVisibility(View.INVISIBLE);
         goldbanknametext.setVisibility(View.INVISIBLE);
@@ -69,7 +69,7 @@ public class AddGold extends AppCompatActivity {
             }
         });
 
-        Button addgoldbtn=findViewById(R.id.addgoldbtn);
+        Button addgoldbtn=findViewById(R.id.addgoldbtn2);
         addgoldbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +83,7 @@ public class AddGold extends AppCompatActivity {
                         HashMap mp=new HashMap();
                         mp.put("gold_name",goldname.getText().toString());
                         mp.put("gold price",Integer.parseInt(price.getText().toString()));
-                        mp.put("gold wieght",weight.getText().toString());
+                        mp.put("gold weight",weight.getText().toString());
                         mp.put("Type of gold investment",goldtype.getText().toString());
 
                         if(locker.isChecked())

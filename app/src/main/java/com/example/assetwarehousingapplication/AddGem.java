@@ -24,22 +24,21 @@ public class AddGem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_gem);
+        setContentView(R.layout.activity_add_gem2);
 
         Intent i=getIntent();
         String username=i.getExtras().getString("username");
-        TextView price=findViewById(R.id.gemprice);
-        TextView weight=findViewById(R.id.gemweight);
-        TextView desc=findViewById(R.id.gemdesc);
-        TextView gem_name=findViewById(R.id.gem_name);
-        TextView typeofgem=findViewById(R.id.typeofgem);
-        TextView gembanknametext=findViewById(R.id.gembanknametext);
-        TextView gembankname=findViewById(R.id.gembankname);
-        TextView gemifsccodetext=findViewById(R.id.gemifsccodetext);
-        TextView gembankifsccode=findViewById(R.id.gembankifsccode);
-        TextView gemlockernumber=findViewById(R.id.gemlockernumber);
-        TextView gemlockernumbertext=findViewById(R.id.gemlockernumbertext);
-        CheckBox locker=findViewById(R.id.gemcheckbox);
+        TextView price=findViewById(R.id.gemprice2);
+        TextView weight=findViewById(R.id.gemweight2);
+        TextView desc=findViewById(R.id.gemdesc2);
+        TextView gem_name=findViewById(R.id.gem_name2);
+        TextView gembanknametext=findViewById(R.id.gembanknametext2);
+        TextView gembankname=findViewById(R.id.gembankname2);
+        TextView gemifsccodetext=findViewById(R.id.gemifsccodetext2);
+        TextView gembankifsccode=findViewById(R.id.gembankifsccode2);
+        TextView gemlockernumber=findViewById(R.id.gemlockernumber2);
+        TextView gemlockernumbertext=findViewById(R.id.gemlockernumbertext2);
+        CheckBox locker=findViewById(R.id.gemcheckbox2);
         gembankifsccode.setVisibility(View.INVISIBLE);
         gembankname.setVisibility(View.INVISIBLE);
         gembanknametext.setVisibility(View.INVISIBLE);
@@ -68,7 +67,7 @@ public class AddGem extends AppCompatActivity {
                 }
             }
         });
-        Button addgembtn=findViewById(R.id.addgembtn);
+        Button addgembtn=findViewById(R.id.addgembtn2);
         addgembtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +82,6 @@ public class AddGem extends AppCompatActivity {
                         mp.put("gem unique id",gem_name.getText().toString());
                         mp.put("gem price",Integer.parseInt(price.getText().toString()));
                         mp.put("gem weight",weight.getText().toString());
-                        mp.put("Type of gem investment",typeofgem.getText().toString());
 
                         if(locker.isChecked())
                         {

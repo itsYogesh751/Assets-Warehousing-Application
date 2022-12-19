@@ -34,6 +34,85 @@ public class ManageAssets extends AppCompatActivity {
         TextView total_gem_price=findViewById(R.id.user_total_gem_assets);
         total_gem_price.setText(pricegem);
 
+        VBankAsts=findViewById(R.id.user_view_bank_assets);
+        VBankAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewBankAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VGoldAsts=findViewById(R.id.user_view_gold_assets);
+        VGoldAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewGoldAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VGemAsts=findViewById(R.id.user_view_gem_assets);
+        VGemAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewGemAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VStockAsts=findViewById(R.id.user_view_stock_assets);
+        VStockAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewStockAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VPtntAsts=findViewById(R.id.user_view_patent_assets);
+        VPtntAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewPatentAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VCpyAsts=findViewById(R.id.user_view_copyright_assets);
+        VCpyAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewCopyrightAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VTrademrkAsts=findViewById(R.id.user_view_trademark_assets);
+        VTrademrkAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewTrademarkAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
+
+        VPropertyAsts=findViewById(R.id.user_view_property_assets);
+        VPropertyAsts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManageAssets.this,ViewPropertyAssets.class);
+                i.putExtra("username",username);
+                startActivity(i);
+            }
+        });
         ABankAsts=findViewById(R.id.user_add_bank_assets);
         APtntAsts=findViewById(R.id.user_add_patent_assets);
         AStockAsts=findViewById(R.id.user_add_stock_assets);
