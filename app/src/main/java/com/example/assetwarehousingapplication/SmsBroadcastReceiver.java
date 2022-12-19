@@ -106,16 +106,18 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 }
                 System.out.println("ammount"+Amount);
                 int amt=Integer.parseInt(Amount);
-                reference=reference.child("ath123").child("asset").child("tangible").child("bank_assets");
-                Query q=reference.orderByChild("account_number").equalTo(String.valueOf(val));
-                System.out.println(val+reference.toString());
+                reference=reference.child("yog1").child("asset").child("tangible").child("bank_assets");
+                String y=String.valueOf(val);
+                StringBuilder l=new StringBuilder();
+                l.append(y).reverse();
+                Query q=reference.orderByChild("accshort").equalTo(String.valueOf(val));
+                System.out.println(val+reference.toString()+val+"\uf8ff");
                 q.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.exists())
                         {
-                            System.out.println("cac"+snapshot);
-
+                            System.out.println("cac"+snapshot.child(String.valueOf(val)));
                             // Toast.makeText(getApplicationContext(),String.valueOf(snapshot.child("account_number").child("balance").getValue(Integer.class)),Toast.LENGTH_LONG).show();
                             Integer balA=snapshot.child(String.valueOf(val)).child("balance").getValue(Integer.class);
                             System.out.println(balA);
